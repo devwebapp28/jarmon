@@ -1,0 +1,12 @@
+# JarMon runtime data (contains credentials and encryption keys)
+/data/*
+!/data/.htaccess
+
+# Environment & local files
+.env
+*.log
+node_modules/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

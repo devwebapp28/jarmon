@@ -1,0 +1,16 @@
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(app|views|lang|lib|data)/ - [F,L]
+</IfModule>
+
+<FilesMatch "\.(json|key|log|md|yml|lock)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
